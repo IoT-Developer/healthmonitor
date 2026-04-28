@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  @apply bg-bg text-text font-body antialiased;
+  background-image:
+    radial-gradient(1200px 600px at 20% -10%, rgba(125,211,252,0.08), transparent 60%),
+    radial-gradient(900px 600px at 100% 100%, rgba(244,63,94,0.06), transparent 60%);
+  background-attachment: fixed;
+}
+
+/* Subtle grid texture for the dashboard panels */
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(125,211,252,.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(125,211,252,.04) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-thumb { background: #22304f; border-radius: 8px; }
+::-webkit-scrollbar-track { background: transparent; }
